@@ -17,13 +17,18 @@ const reverseGreetingChars = copyOfGreetingChars.reverse();
 const newGreeting = reverseGreetingChars.join("");
 // console.log(`Here's our new greeting: ${newGreeting}`);
 
-const query = "           GOOGLE FONTS              ";
-const dbEntries = ["Google Fonts", "Google Maps"];
-const lowerCaseQuery = query.toLowerCase();
-const trimmedQuery = lowerCaseQuery.trim();
-const isInDb = trimmedQuery === dbEntries[0].toLowerCase().trim();
+const query = "             GOOGLE FONTS              ";
+const dbEntries = ["        Google Fonts    ", "Google Maps"];
+// const dbEntry = dbEntries[0];
+// const lowerCaseDbEntry = dbEntry.toLowerCase(); // "google fonts"
+// console.log(lowerCaseDbEntry);
+// const trimmedDbEntry = lowerCaseDbEntry.trim();
+// console.log(trimmedDbEntry);
+// const lowerCaseQuery;
+// const trimmedQuery
+const isInDb = query.toLowerCase().trim() === dbEntries[0].toLowerCase().trim();
 if (isInDb) {
-   console.log("Here is your result!");
+   console.log("We found a result!");
 } else {
    console.log(`Sorry, couldn't find anything for ${query}`);
 }
