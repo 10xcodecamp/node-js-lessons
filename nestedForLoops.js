@@ -5,18 +5,22 @@ const users = [
 ];
 
 // Please provide normalized data for each user field (everything lower cased)
+// Please keep in their original rows
 
 let normalizedUsers = [];
 
 for (let i = 0; i < users.length; i++) {
    const userFields = users[i];
-   const newUserFields = [];
+
+   let newUserFields = [];
 
    for (let i2 = 0; i2 < userFields.length; i2++) {
       const userField = String(userFields[i2]);
       const lowerCasedField = userField.toLowerCase();
-      normalizedUsers = normalizedUsers.concat(lowerCasedField);
+      newUserFields = newUserFields.concat(lowerCasedField);
    }
+
+   normalizedUsers = normalizedUsers.concat([newUserFields]);
 }
 
 console.log(normalizedUsers);
