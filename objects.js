@@ -5,7 +5,15 @@ const user = {
    id: getId(),
 };
 
+const copyOfUser = { ...user };
+copyOfUser.isActive = true;
+copyOfUser.tokenExpiredAt = user.createdAt + 86400000;
+copyOfUser.isCoolPerson = true;
+copyOfUser.isCoolPerson = false;
+delete copyOfUser.isCoolPerson;
+
 console.log(user);
+console.log(copyOfUser);
 
 /* functions start here */
 
@@ -20,8 +28,8 @@ function getPassword() {
 }
 
 function getCreatedAt() {
-   // generate createdAt number, e.g. 20200921
-   return 20200921;
+   // generate createdAt number, e.g. 1600730742258
+   return Date.now();
 }
 
 function getId() {
