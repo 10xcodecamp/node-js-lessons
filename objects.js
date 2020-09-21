@@ -5,7 +5,7 @@ const user = {
    id: getId(),
 };
 
-const copyOfUser = { ...user };
+const copyOfUser = { ...user }; // Object.assign({}, theNameOfYourObj)
 copyOfUser.isActive = true;
 copyOfUser.tokenExpiredAt = user.createdAt + 86400000;
 copyOfUser.isCoolPerson = true;
