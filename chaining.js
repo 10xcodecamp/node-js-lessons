@@ -10,7 +10,7 @@ const users = [
          },
          {
             site: "facebook",
-            username: "mikezetlow",
+            username: "fbmikezetlow",
             profilePhoto: {
                sm: "small.jpg",
                lg: "large.jpg",
@@ -25,7 +25,7 @@ const users = [
       socialProfiles: [
          {
             site: "facebook",
-            username: "jsmith",
+            username: "fbjsmith",
             profilePhoto: {
                sm: "small.jpg",
                lg: "large.jpg",
@@ -46,20 +46,38 @@ const users = [
    },
 ];
 
-const fbUsers = users.map((user) => {
-   // name * fb name only
-   const newUser = {
-      name: user.name,
-      fbName: getFbName(user),
-   };
-   return newUser;
-});
-
-function getFbName(user) {
-   // return FB name if they have one
-   // if they don't, return empty string: ""
-   // if site: facebook is in social profiles array
-   // return the username
-}
+const fbUsers = users
+   .map((user) => {
+      // name * fb name only
+      const newUser = {
+         name: user.name,
+         fbName: getFbNameUsingFP(user),
+      };
+      return newUser;
+   })
+   .filter((user) => {
+      return user.fbName !== "";
+   });
 
 console.log(fbUsers);
+
+function getFbName(user) {
+   let fbName = "";
+   user.socialProfiles.forEach((profile) => {
+      if (profile.site === "facebook") {
+         fbName = profile.username;
+      }
+   });
+   return fbName;
+}
+
+function getFbNameUsingFP(user) {
+   const fbProfiles = user.socialProfiles.filter((profile) => {
+      return profile.site === "facebook";
+   });
+
+   if (fbProfiles.length > 0) {
+      return fbProfiles[0].username;
+   }
+   return "";
+}
