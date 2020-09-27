@@ -57,7 +57,9 @@ const fbUsers = users.map((user) => {
 
 function getFbName(user) {
    // return FB name if they have one
-   // if they don't return empty string: ""
+   // if they don't, return empty string: ""
+   // if site: facebook is in social profiles array
+   // return the username
 }
 
 console.log(fbUsers);
