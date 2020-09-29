@@ -108,19 +108,22 @@ Write regex that validates an email given the following criteria.
 -  Followed by 0 or more of any character (back of local-part)
 -  Followed by the @ symbol
 -  Followed by 1 letter or number (front of domain name)
--  Followed by 0 or more “word” characters or dashes (back of domain name)
+-  Followed by 1 or more “word” characters or dashes (back of domain name)
 -  Followed by a period
 -  Followed by 2 or more letters (top level domain)
--  And it’s case insensitive
+-  And the regex is case insensitive
 
 ###### PASS
 
 ```
 mike@example.com
 mike.zetlow@gmail.com
+mike.zetlow@GMAIL.COM
 mike+no-reply@example.com
 m@example.ai
-mike@space-x.com
+1mike@space-x.com
+mike@10xcodecamp.com
+_@space.com
 ```
 
 ###### FAIL
@@ -129,6 +132,7 @@ mike@space-x.com
 mike@_x.com
 mike
 @mike
+mike@_ai.com
 example.com
 @example.ai
 mike@g.com
