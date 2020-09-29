@@ -1,3 +1,34 @@
+## Validate phone number formatting
+
+Write regex that validates a phone number given the following criteria.
+
+-  The phone number must begin with a 3-digit area code wrapped in parentheses.
+-  Followed by a space.
+-  Followed by 3 digits.
+-  Followed by a dash.
+-  Followed by 4 digits.
+
+###### PASS
+
+```
+(702) 555-1234
+```
+
+###### FAIL
+
+```
+(702)555-1234
+(702) 555-12345
+(702) 555-1234 ext. 1000
+ (702) 555-1234
+(702) 555 - 1234
+(702) 555_1234
+702-555-1234
+702 555-1234
+7025551234
+(702) 555-CALL
+```
+
 ## Validate password formatting
 
 Write regex that validates a password that only contains letters (lower case or upper case) or numbers or the following special characters:
@@ -28,37 +59,6 @@ mypassword :)
  mypassword
 123456
 mike@gmail.com
-```
-
-## Validate phone number formatting
-
-Write regex that validates a phone number given the following criteria.
-
--  The phone number must begin with a 3-digit area code wrapped in parentheses.
--  Followed by a space.
--  Followed by 3 digits.
--  Followed by a dash.
--  Followed by 4 digits.
-
-###### PASS
-
-```
-(702) 555-1234
-```
-
-###### FAIL
-
-```
-(702)555-1234
-(702) 555-12345
-(702) 555-1234 ext. 1000
- (702) 555-1234
-(702) 555 - 1234
-(702) 555_1234
-702-555-1234
-702 555-1234
-7025551234
-(702) 555-CALL
 ```
 
 ## Validate URL formatting
