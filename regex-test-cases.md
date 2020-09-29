@@ -114,6 +114,7 @@ Write regex that validates an email given the following criteria.
 
 ```
 mike@example.com
+mike.zetlow@gmail.com
 mike+no-reply@example.com
 m@example.ai
 mike@space-x.com
