@@ -124,6 +124,7 @@ mike@space-x.com
 ```
 mike@_x.com
 mike
+@mike
 example.com
 @example.ai
 mike@g.com
