@@ -68,7 +68,7 @@ Write regex that validates a URL given the following criteria.
 -  The URL must begin with `https://www` or `http://www`
 -  Followed by a period
 -  Followed by 1 letter (any case) or number
--  Followed by 0 or more “word” characters or dashes
+-  Followed by 1 or more “word” characters or dashes
 -  Followed by a period
 -  Followed by 2 or more letters
 
@@ -78,7 +78,6 @@ Write regex that validates a URL given the following criteria.
 https://www.example.com
 http://www.example.com
 http://www.ai.io
-https://www.x.io
 https://www.10xcodecamp.com
 https://www.all-in.christmas
 https://www.ex_ample.com
@@ -89,10 +88,11 @@ http://www.A4DD28BBA3.app
 
 ```
 http//www.example.com
+https://www.x.io
 https://www._x.net
 https://wwwexamplecom
 https://www.ex+ample.com
-peanutbutter
+example.com
 https://www.x.co m
  https://www.x.com
 http:www.example.com
