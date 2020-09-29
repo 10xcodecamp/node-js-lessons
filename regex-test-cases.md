@@ -68,7 +68,7 @@ Write regex that validates a URL given the following criteria.
 -  The URL must begin with `https://www` or `http://www`
 -  Followed by a period
 -  Followed by 1 letter (any case) or number
--  Followed by 1 or more “word” characters or dashes
+-  Followed by 1 or more letters, numbers, underscores, or dashes
 -  Followed by a period
 -  Followed by 2 or more letters
 
@@ -108,7 +108,7 @@ Write regex that validates an email given the following criteria.
 -  Followed by 0 or more of any character (back of local-part)
 -  Followed by the @ symbol
 -  Followed by 1 letter or number (front of domain name)
--  Followed by 1 or more “word” characters or dashes (back of domain name)
+-  Followed by 1 or more letters, numbers, underscores, or dashes (back of domain name)
 -  Followed by a period
 -  Followed by 2 or more letters (top level domain)
 -  And the regex is case insensitive
