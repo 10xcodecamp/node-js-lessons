@@ -88,6 +88,8 @@ http://www.A4DD28BBA3.app
 
 ```
 http//www.example.com
+http://www_example.com
+http://www.example_com
 https://www.x.io
 https://www._x.net
 https://wwwexamplecom
