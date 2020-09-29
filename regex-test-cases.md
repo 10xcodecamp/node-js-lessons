@@ -79,6 +79,7 @@ https://www.example.com
 http://www.example.com
 http://www.ai.io
 https://www.x.io
+https://www.10xcodecamp.com
 https://www.all-in.christmas
 https://www.ex_ample.com
 http://www.A4DD28BBA3.app
